@@ -1,11 +1,49 @@
 @import '../../abstracts/mixins';
 
 .product {
+  @include containerWithMinHeight(450);
+  @include medium-fs();
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: '9';
-  background-color: #35a3f182;
-  @include containerWithMinHeight();
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  color: #fff;
+  background-image: url('../../../public/section-image/product.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+// .product_title {
+//   font-size: 42px;
+//   font-family: 'Alegreya-Regular';
+//   padding: 0 15px;
+//   color: #fff;
+//   ;
+//   border-radius: 12px 0 0 8px;
+//   background-color: #2c91a1d4;
+// }
+
+.product_description {
   @include large-fs();
+  font-family: 'Alegreya-Thin';
+  padding: 0 15px;
+  font-weight: 600;
+  // background-color: #2c91a1d4;
+  color: #fff;
+  text-align: end;
+  text-wrap: balance;
+  // border-radius: 12px 0 0 8px;
+}
+
+.product_list {}
+
+.product_item {
+  font-size: 28px;
+  font-family: 'Alegreya-Thin';
+}
+
+.product_ps {
+  font-family: 'Alegreya-Thin';
 }

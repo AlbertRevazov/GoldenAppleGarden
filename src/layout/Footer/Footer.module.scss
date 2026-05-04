@@ -1,12 +1,10 @@
 @import '../../abstracts/mixins';
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
   color: white;
   font-family: 3;
+  @include flex-center();
   @include container();
 
 }

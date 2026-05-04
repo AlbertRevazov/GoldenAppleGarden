@@ -1,11 +1,8 @@
 @import '../../abstracts/mixins';
 
-.contacts{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.contacts {
   background-color: pink;
-
-  @include containerWithMinHeight ();
+  @include containerWithMinHeight (650);
   @include large-fs();
+  @include flex-center();
 }

@@ -1,11 +1,9 @@
 @import '../../abstracts/mixins';
 
-.history{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.history {
   background-color: darkorange;
   font-family: '2';
-  @include containerWithMinHeight();
+  @include containerWithMinHeight(650);
   @include large-fs();
+  @include flex-center();
 }
