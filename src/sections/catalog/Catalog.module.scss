@@ -1,9 +1,78 @@
 @import '../../abstracts/mixins';
 
-.catalog {
-  font-family: '9';
-  background-color: #3535f182;
-  @include containerWithMinHeight(650);
-  @include large-fs();
-    @include flex-center();
+.catalog {}
+
+.catalog_list {
+  @include containerWithMinHeight(550);
+  @include flex-center();
+  padding: 0;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.catalog_item {
+  max-width: 255px;
+  height: 450px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-wrap: balance;
+  padding: 12px 0;
+  border-radius: 12px;
+}
+
+.item_title {
+  font-family: AdventPro;
+  font-size: x-large;
+}
+
+.item_description {
+  font-family: 'Thin';
+  font-size: medium;
+}
+
+.item_image {
+  // width: 100%;
+  // object-fit: cover;
+  min-width: 100%;
+  max-height: 50%;
+}
+
+.button {
+  background-color: #3aab06fd;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  font-family: Adventpro;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.link {
+  color: #fff;
+}
+
+.button:disabled {
+  color: #fff;
+  background-color: orangered;
+}
+
+@media (max-width: 1040px) {
+  .catalog_list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .catalog_item {}
+}
+
+@media (max-width: 768px) {
+.catalog_item {
+  max-width: 42vw;
+}
 }

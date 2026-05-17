@@ -1,6 +1,6 @@
 import React from "react"
 import styles from './Product.module.scss'
-import { ProductData } from "../../mocks/blocks/Product"
+import { ProductData } from "../../mocks/Product"
 
 export const Product = () => {
   return (

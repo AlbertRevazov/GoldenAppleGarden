@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Navigation.module.scss'
-import { NavigationData } from '../../mocks/blocks/NavigationData'
+import { NavigationData } from '../../mocks/NavigationData'
 
 export const Navigation = () => {
   return (
