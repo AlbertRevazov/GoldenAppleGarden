@@ -1,18 +1,22 @@
 @import '../../abstracts/mixins';
 
-.catalog {}
+.catalog {
+  @include containerWithMinHeight(550);
+  background-color: #e4e4e4;
+  position: relative;
+  overflow: hidden;
+}
 
 .catalog_list {
-  @include containerWithMinHeight(550);
   @include flex-center();
-  padding: 0;
-  overflow: hidden;
-  justify-content: space-between;
+  position: relative;
+  gap: 40px;
+  justify-content: space-evenly;
 }
 
 .catalog_item {
-  max-width: 255px;
-  height: 450px;
+  min-width: 300px;
+  min-height: 500px;
   overflow: hidden;
   background-color: #fff;
   display: flex;
@@ -23,33 +27,39 @@
   text-wrap: balance;
   padding: 12px 0;
   border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.catalog_list:hover {
+  animation-play-state: paused;
 }
 
 .item_title {
-  font-family: AdventPro;
-  font-size: x-large;
+  font-family: Amatic;
+  font-size: 35px;
+  color: darkred;
 }
 
 .item_description {
-  font-family: 'Thin';
+  font-family: Amatic;
+  text-wrap: balance;
+  text-align: center;
   font-size: medium;
-}
-
-.item_image {
-  // width: 100%;
-  // object-fit: cover;
-  min-width: 100%;
-  max-height: 50%;
+  font-size: 22px;
+  font-weight: 600;
+  color: #8a8d89f4;
 }
 
 .button {
+  width: 80%;
   background-color: #3aab06fd;
   border: none;
   border-radius: 8px;
   padding: 6px;
-  font-family: Adventpro;
+  font-family: Thin;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .link {
@@ -59,20 +69,23 @@
 .button:disabled {
   color: #fff;
   background-color: orangered;
+  cursor: default;
 }
 
-@media (max-width: 1040px) {
+
+@media (min-width: 768px) {
   .catalog_list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    animation: infiniteSlide 25s linear 1s infinite alternate;
+    animation-delay: 3s;
+  }
+}
+
+@keyframes infiniteSlide {
+  0% {
+    left: 0%;
   }
 
-  .catalog_item {}
-}
-
-@media (max-width: 768px) {
-.catalog_item {
-  max-width: 42vw;
-}
+  100% {
+    left: -60%;
+  }
 }
