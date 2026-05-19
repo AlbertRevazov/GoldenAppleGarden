@@ -1,57 +1,59 @@
 @import '../../abstracts/mixins';
 
 .catalog {
-  @include containerWithMinHeight(550);
-  background-color: #e4e4e4;
+  @include flex-center();
+  height: 550px;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
-}
-
-.catalog_list {
-  @include flex-center();
   position: relative;
   gap: 40px;
   justify-content: space-evenly;
 }
 
+.catalog_list {
+  @include containerWithMinHeight(500);
+  height: 350px;
+}
+
 .catalog_item {
-  min-width: 300px;
-  min-height: 500px;
-  overflow: hidden;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 60%;
+  display: flex !important;
   justify-content: space-between;
-  text-align: center;
-  text-wrap: balance;
-  padding: 12px 0;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px 20px;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
-.catalog_list:hover {
-  animation-play-state: paused;
+.catalog_header {
+  height: 50%;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
 }
 
 .item_title {
   font-family: Amatic;
-  font-size: 35px;
+  font-size: 42px;
   color: darkred;
 }
 
 .item_description {
   font-family: Amatic;
-  text-wrap: balance;
-  text-align: center;
+  text-align: left;
   font-size: medium;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
   color: #8a8d89f4;
 }
 
 .button {
-  width: 80%;
+  width: 90%;
   background-color: #3aab06fd;
   border: none;
   border-radius: 8px;
@@ -72,20 +74,28 @@
   cursor: default;
 }
 
-
-@media (min-width: 768px) {
-  .catalog_list {
-    animation: infiniteSlide 25s linear 1s infinite alternate;
-    animation-delay: 3s;
-  }
-}
-
-@keyframes infiniteSlide {
-  0% {
-    left: 0%;
+@media (max-width: 768px) {
+  .item_image {
+    display: none;
   }
 
-  100% {
-    left: -60%;
+  .catalog_item {
+    width: 90%;
+    justify-content: center;
+    padding: 12px 0;
+    margin: 0 auto;
+  }
+
+  .catalog_header {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .item_description {
+    font-family: Amatic;
+    text-align: center;
+    font-size: 24px;
   }
 }
