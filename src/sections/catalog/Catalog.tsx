@@ -15,7 +15,7 @@ export const Catalog = () => {
         spaceBetween={40}
         slidesPerView={1}
         centeredSlides={true}
-        speed={2700}
+        speed={1200}
         direction='vertical'
       >
         {CatalogData.map((item) => {
