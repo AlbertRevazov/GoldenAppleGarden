@@ -1,4 +1,5 @@
 @import '../../abstracts/mixins';
+@import '../../abstracts/_variables.scss';
 
 .catalog {
   @include flex-center();
@@ -38,13 +39,13 @@
 }
 
 .item_title {
-  font-family: Amatic;
+  font-family: $fisrt_font;
   font-size: 42px;
   color: darkred;
 }
 
 .item_description {
-  font-family: Amatic;
+  font-family: $fisrt_font;
   text-align: left;
   font-size: medium;
   font-size: 30px;
@@ -58,7 +59,7 @@
   border: none;
   border-radius: 8px;
   padding: 6px;
-  font-family: Thin;
+  font-family: $fisrt_font;
   font-weight: 600;
   font-size: 24px;
   cursor: pointer;
@@ -94,7 +95,7 @@
   }
 
   .item_description {
-    font-family: Amatic;
+    font-family: $third_font;
     text-align: center;
     font-size: 24px;
   }

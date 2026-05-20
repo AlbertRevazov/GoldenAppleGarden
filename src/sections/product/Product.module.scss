@@ -1,4 +1,5 @@
 @import '../../abstracts/mixins';
+@import '../../abstracts/_variables.scss';
 
 .product {
   @include containerWithMinHeight(350);
@@ -18,7 +19,8 @@
 .product_title {
   @include large-fs();
   max-width: 50%;
-  font-family: 'Amatic-B';
+  font-family: $third_font;
+  font-weight: 500;
   color: #fff;
   text-align: end;
   text-wrap: balance;
@@ -30,7 +32,7 @@
 
 .product_item {
   font-size: 28px;
-  font-family: 'Amatic';
+  font-family: $third_font;
   text-align: end;
   font-weight: 300;
 }
