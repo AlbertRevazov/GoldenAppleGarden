@@ -6,7 +6,7 @@ import 'swiper/css';
 
 export const Catalog = () => {
   return (
-    <article className={styles.catalog}>
+    <article id='catalog' className={styles.catalog}>
       <Swiper className={styles.catalog_list}
         modules={[Autoplay, Parallax]}
         autoplay

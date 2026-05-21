@@ -7,6 +7,7 @@ import { History } from "../sections/history/History"
 import { About } from "../sections/about/About"
 import { Contacts } from "../sections/contacts/Contacts"
 import { Footer } from "../layout/Footer/Footer"
+import { ScrollButton } from "../components/ScrollButton/ScrollButton"
 
 export const Home = () => {
 
@@ -19,6 +20,7 @@ export const Home = () => {
       <About />
       <Contacts />
       <Footer />
+      <ScrollButton />
     </>
   )
 }

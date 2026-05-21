@@ -1,11 +1,12 @@
 @import '../../abstracts/_mixins';
 
 .header {
+  @include container();
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  @include container();
   margin: 0 auto;
   padding: 0;
+  position: relative;
 }

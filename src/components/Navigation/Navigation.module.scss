@@ -2,24 +2,33 @@
 @import '../../abstracts/_mixins.scss';
 @import '../../fonts/fonts.scss';
 
-.nav {
-  font-family: $third_font;
-  font-weight: 400;
-  color: $secondary-color;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  @include container();
-  @include large-fs();
+.nav_list {
+  display: none;
 }
 
-.navigation_link {
-  color: #000;
-  list-style: none;
-}
+@media (min-width:768px) {
 
-.navigation_link a {
-  text-decoration: none;
+  .nav_list {
+    @include container();
+    @include large-fs();
+    display: block;
+    font-family: $third_font;
+    font-weight: 400;
+    color: $secondary-color;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .navigation_link {
+    color: #000;
+    list-style: none;
+  }
+
+  .navigation_link a {
+
+    text-decoration: none;
+  }
 }
